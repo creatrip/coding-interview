@@ -1,0 +1,21 @@
+{
+  "name": "coding-interview",
+  "version": "0.1.0",
+  "description": "Creatrip coding interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creatrip/coding-interview.git"
+  },
+  "author": "@johnwook",
+  "license": "MIT",
+  "homepage": "https://github.com/creatrip/coding-interview#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  }
+}

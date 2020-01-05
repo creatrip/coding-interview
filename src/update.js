@@ -30,7 +30,7 @@ function update(state, updater) {
           } else if (typeof value !== "object") {
             throw new Error("Given updater value for $merge must be object");
           } else {
-            return Object.assign({}, state, value);
+            return Object.assign(state, value);
           }
         }
         case "$apply": {
@@ -64,7 +64,9 @@ function update(state, updater) {
         }
       }
     } else {
-      console.log("traverse");
+      const newState = Object.assign({}, state);
+      newState[prop] = update(newState[prop], updater[prop]);
+      return newState;
     }
   }
 }

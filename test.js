@@ -26,12 +26,12 @@ describe("update", () => {
     });
   });
 
-  describe("can pass react's test suite", () => {
-    it.only("should support set", () => {
+  describe.only("can pass react's test suite", () => {
+    it("should support set", () => {
       expect(update({ a: "b" }, { $set: { c: "d" } })).toEqual({ c: "d" });
     });
 
-    it.only("should support push", () => {
+    it("should support push", () => {
       expect(update([1], { $push: [7] })).toEqual([1, 7]);
     });
 

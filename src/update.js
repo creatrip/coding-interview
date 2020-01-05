@@ -1,7 +1,16 @@
 function update(state, updater) {
-  for (let prop of update) {
+  console.log(updater);
+  for (let prop in updater) {
     if (prop[0] === "$") {
-      console.log("do something");
+      switch (prop) {
+        case "$set": {
+          return updater[prop];
+        }
+        default: {
+          console.log("given setter not defined");
+          return state;
+        }
+      }
     } else {
       console.log("traverse");
     }

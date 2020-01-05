@@ -27,7 +27,7 @@ describe("update", () => {
   });
 
   describe("can pass react's test suite", () => {
-    it("should support set", () => {
+    it.only("should support set", () => {
       expect(update({ a: "b" }, { $set: { c: "d" } })).toEqual({ c: "d" });
     });
 

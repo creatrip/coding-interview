@@ -1,4 +1,4 @@
-const { update } = require("./src/update.js"); // <- this is the file you make;
+const update = require("./dist/update.js").default; // <- this is the file you make;
 
 describe("update", () => {
   describe("has a #$set method that", () => {

@@ -1,4 +1,8 @@
-function update(state, updater) {
+function push(state: Array<any>, value: Array<any>) {
+  return state.concat(value);
+}
+
+function update(state: any, updater: any) {
   for (let prop in updater) {
     const value = updater[prop];
     if (prop[0] === "$") {
@@ -7,13 +11,7 @@ function update(state, updater) {
           return value;
         }
         case "$push": {
-          if (!Array.isArray(state)) {
-            throw new Error("Given state for $push must be array");
-          } else if (!Array.isArray(value)) {
-            throw new Error("Given updater value for $push must be array");
-          } else {
-            return state.concat(value);
-          }
+          return push(state, value);
         }
         case "$unshift": {
           if (!Array.isArray(state)) {
@@ -71,4 +69,4 @@ function update(state, updater) {
   }
 }
 
-exports.update = update;
+export default update;

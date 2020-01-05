@@ -4,7 +4,7 @@
   "description": "Creatrip coding interview",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && jest --watch"
+    "test": "tsc && jest"
   },
   "repository": {
     "type": "git",

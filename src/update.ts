@@ -49,7 +49,7 @@ function update(state: any, updater: any) {
       }
     } else {
       const newState = Object.assign({}, state);
-      newState[prop] = update(newState[prop], updater[prop]);
+      newState[prop] = update(newState[prop], value);
       return newState;
     }
   }

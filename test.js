@@ -31,7 +31,7 @@ describe("update", () => {
       expect(update({ a: "b" }, { $set: { c: "d" } })).toEqual({ c: "d" });
     });
 
-    it("should support push", () => {
+    it.only("should support push", () => {
       expect(update([1], { $push: [7] })).toEqual([1, 7]);
     });
 
